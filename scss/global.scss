@@ -1,0 +1,113 @@
+$color: #FF5442;
+$color2: #E74C3C;
+$color3: #CC4335;
+$color4: #E6E6E6;
+$color5: #404040;
+$color6: #272727;
+
+
+// import
+@import "fuente.scss";
+
+
+body {
+  background-color: $color6;
+  font-family: 'Open Sans', sans-serif;
+}
+
+*, h1,h2,h3,h4,h5,h6,p,a,span,strong {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.general__contendor {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.info__lyplace {
+  flex: 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.info__contenedor {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 20px;
+  p {
+    font-size: 18px;
+    color: $color4;
+    font-weight: 300;
+    text-align: center;
+    &.trabajando {
+      font-size: 14px;
+    }
+  }
+}
+
+.frase {
+  padding: 0 20px;
+}
+
+.logo-lyplace {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  img {
+    padding: 0 40px;
+  }
+}
+
+.footer {
+  background-color: $color4;
+  padding: 5px 20px;
+  p {
+    text-align: center;
+    color: $color5;
+    margin: 0;
+    font-size: 12px;
+  }
+}
+
+.redes {
+  text-align: center;
+  a {
+    font-size: 18px;
+    color: $color4;
+    text-decoration: none;
+    margin: 20px;
+    transition: all .4s;
+    &:hover {
+      color: $color2;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+
+  .info__contenedor {
+    p {
+      font-size: 28px;
+      &.trabajando {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .footer {
+    p {
+      font-size: 14px;
+    }
+  }
+
+
+  .redes {
+    a {
+      font-size: 24px;
+    }
+  }
+
+}
