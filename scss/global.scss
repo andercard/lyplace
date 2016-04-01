@@ -48,7 +48,7 @@ body {
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  margin: 20px auto;
+  margin: 10px auto;
   padding: 20px;
 }
 
@@ -142,7 +142,9 @@ body {
 
 
 @media (min-width: 768px) {
-
+  .header {
+    margin: 20px auto;
+  }
   .header__logo {
     img {
       max-width: 100%;
