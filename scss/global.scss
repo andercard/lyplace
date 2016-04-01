@@ -4,6 +4,8 @@ $color3: #CC4335;
 $color4: #E6E6E6;
 $color5: #404040;
 $color6: #272727;
+$color7: #060606;
+$color8: #808080;
 
 
 // import
@@ -12,7 +14,20 @@ $color6: #272727;
 
 body {
   background-color: $color6;
+  background-image: url(../img/bg_image.jpeg);
+  background-size: cover;
+  position: relative;
+  background-position: center;
   font-family: 'Open Sans', sans-serif;
+  &::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color7,.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }
 
 *, h1,h2,h3,h4,h5,h6,p,a,span,strong {
@@ -23,7 +38,59 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  position: relative;
+  z-index: 20;
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.header_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  img {
+    padding: 0 40px;
+  }
+}
+
+
+.redes {
+  display: flex;
+  align-items: center;
+  p {
+    font-size: 0px;
+    font-weight: 300;
+    color: $color4;
+  }
+  a {
+    font-size: 18px;
+    color: $color6;
+    text-decoration: none;
+    margin: 20px;
+    transition: all .4s;
+    background-color: $color4;
+    background-color: #E6E6E6;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      color: $color2;
+    }
+  }
+}
+
 
 .info__lyplace {
   flex: 1 0;
@@ -34,65 +101,56 @@ body {
 }
 .info__contenedor {
   width: 100%;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 20px;
   p {
-    font-size: 18px;
+    font-size: 36px;
+    line-height: 38px;
     color: $color4;
     font-weight: 300;
     text-align: center;
+    span {
+      font-size: 24px;
+    }
     &.trabajando {
-      font-size: 14px;
+      font-size: 24px;
+      background-color: rgba($color3,.98);
+      border-radius: 50px;
+      padding: 10px 20px;
+      display: inline-block;
+      margin: auto;
     }
   }
 }
 
 .frase {
   padding: 0 20px;
-}
-
-.logo-lyplace {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-  img {
-    padding: 0 40px;
-  }
+  text-align: center;
 }
 
 .footer {
-  background-color: $color4;
-  padding: 5px 20px;
+  background-color: $color6;
+  padding: 10px 20px;
   p {
     text-align: center;
-    color: $color5;
+    color: $color8;
     margin: 0;
     font-size: 12px;
   }
 }
 
-.redes {
-  text-align: center;
-  a {
-    font-size: 18px;
-    color: $color4;
-    text-decoration: none;
-    margin: 20px;
-    transition: all .4s;
-    &:hover {
-      color: $color2;
-    }
-  }
-}
 
 @media (min-width: 768px) {
 
   .info__contenedor {
     p {
-      font-size: 28px;
+      font-size: 48px;
+      line-height: 52px;
+      span {
+        font-size: 36px;
+      }
       &.trabajando {
-        font-size: 16px;
+        font-size: 32px;
       }
     }
   }
@@ -105,8 +163,16 @@ body {
 
 
   .redes {
+    display: flex;
+    align-items: center;
+    p {
+      font-size: 24px;
+      font-weight: 300;
+    }
     a {
       font-size: 24px;
+      width: 40px;
+      height: 40px;
     }
   }
 
