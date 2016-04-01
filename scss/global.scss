@@ -52,13 +52,13 @@ body {
   padding: 20px;
 }
 
-.header_logo {
+.header__logo {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin-bottom: 30px;
   img {
-    padding: 0 40px;
+    max-width: 90%;
   }
 }
 
@@ -104,8 +104,8 @@ body {
   max-width: 1200px;
   margin: 0 20px;
   p {
-    font-size: 36px;
-    line-height: 38px;
+    font-size: 30px;
+    line-height: 32px;
     color: $color4;
     font-weight: 300;
     text-align: center;
@@ -113,12 +113,13 @@ body {
       font-size: 24px;
     }
     &.trabajando {
-      font-size: 24px;
+      font-size: 18px;
       background-color: rgba($color3,.98);
       border-radius: 50px;
       padding: 10px 20px;
       display: inline-block;
       margin: auto;
+      margin-bottom: 20px;
     }
   }
 }
@@ -141,6 +142,12 @@ body {
 
 
 @media (min-width: 768px) {
+
+  .header__logo {
+    img {
+      max-width: 100%;
+    }
+  }
 
   .info__contenedor {
     p {
